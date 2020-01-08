@@ -1,27 +1,45 @@
 /*======Powered by Sass======*/
 $theme-color: #E1251A; // 主题颜色
 $smallText-color: #999999; // 列表项文字颜色
+$smallTitle-color: #666666; // 列表文字标题颜色
 $listBG-color: #ffffff; // 列表背景颜色
 $listBorder-color: #cccccc; // 列表边框颜色
+$listFont-Size: 12px; // 列表文字大小
 
 /*======Page popup======*/
 /*1. 导航条弹出层*/
-.myJD {
+.banner-popup {
+    position: relative;
+}
+
+.headerRight-active {
+    font-weight: 700;
+
+    a {
+        color: $theme-color !important;
+    }
+}
+
+.banner-popup > div {
+    box-shadow: 2px 2px 2px $listBorder-color;
+}
+
+@mixin bannerDisplay($width, $height, $left) {
     display: none;
     position: absolute;
-    width: 282px;
-    height: 162px;
-    left: 926px;
-
+    width: $width;
+    height: $height;
+    left: $left;
+    top: 5px;
+    z-index: 100;
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-
     li {
         a {
-            font-size: 12px;
+            font-size: $listFont-Size;
             color: $smallText-color;
             &:hover{
                 text-decoration: none;
@@ -40,7 +58,7 @@ $listBorder-color: #cccccc; // 列表边框颜色
             margin: 10px 0 0 20px;
         }
         ul:last-of-type {
-            margin: 10px 0 0 65px;
+            margin: 10px 0 0 50px;
         }
     }
     .list + .list {
@@ -52,8 +70,114 @@ $listBorder-color: #cccccc; // 列表边框颜色
     }
 }
 
+.myJD {
+    @include bannerDisplay($width: 250px, $height: 162px, $left: 708px);
+}
 
+.enterpriseBuy {
+    @include bannerDisplay($width: 220px, $height: 75px, $left: 849px);
 
+    .list {
+        height: 75px;
+        border: solid 1px $listBorder-color !important;
+    }
+}
+
+.customerServe {
+    @include bannerDisplay($width: 230px, $height: 245px, $left: 775px);
+
+    .list {
+        ul:first-of-type {
+            margin: 0 0 0 20px !important;
+        }
+
+        ul:last-of-type {
+            margin: 0 0 0 50px !important;
+        }
+    }
+
+    .list:first-of-type {
+        height: 135px;
+    }
+
+    .list:last-of-type {
+        height: 110px;
+    }
+
+    .list > p {
+        font-size: $listFont-Size;
+        font-weight: 700;
+        padding: 10px 0 0 20px;
+        margin: 0;
+        color: $smallTitle-color;
+    }
+}
+
+.websiteGuide {
+    display: none;
+    position: absolute;
+    width: 1170px;
+    $height: 172px;
+    height: $height;
+    left: -15px;
+    top: 5px;
+    z-index: 100;
+
+    .list {
+        float: left;
+        background-color: $listBG-color;
+        border: solid 1px $listBorder-color;
+
+        ul {
+            float: left;
+        }
+
+        ul:first-of-type {
+            margin: 10px 0 0 20px;
+        }
+
+        ul + ul {
+            margin: 10px 0 0 30px;
+        }
+    }
+
+    .list:first-of-type {
+        width: 360px;
+        height: $height;
+    }
+
+    .list + .list {
+        width: 270px;
+        height: $height;
+        border-left: none;
+    }
+
+    .list > p {
+        font-size: $listFont-Size;
+        font-weight: 700;
+        padding: 10px 0 0 20px;
+        margin: 0;
+        color: $smallTitle-color;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        a {
+            font-size: $listFont-Size;
+            color: $smallText-color;
+
+            &:hover {
+                text-decoration: none;
+                color: $theme-color;
+            }
+        }
+    }
+}
 
 
 

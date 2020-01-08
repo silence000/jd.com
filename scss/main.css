@@ -25,7 +25,8 @@ body {
 .header-gb {
   background-color: #e3e4e5; }
   .header-gb .container {
-    height: 310px; }
+    height: 30px;
+  }
   .header-gb .row {
     display: inline; }
 
