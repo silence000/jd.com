@@ -9,9 +9,11 @@
     <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet">
     <!-- Fontawesome 5.11.2 框架 -->
     <link href="plugin/fontawesome/css/all.css" rel="stylesheet">
+    <!-- My StyleSheet(Sass) -->
+    <link href="scss/main.css" rel="stylesheet">
+    <link href="scss/popup.css" rel="stylesheet">
     <!-- My StyleSheet -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/popup.css" rel="stylesheet">
+    <link href="css/extra.css" rel="stylesheet">
 </head>
 <body>
     <!-- navBar Begin -->
@@ -26,8 +28,7 @@
                     <div class="divide"></div>
                     <p><a href="#">我的订单</a></p>
                     <div class="divide"></div>
-                    <p><a href="#">我的京东<i class="fa fa-caret-down"></i></a></p>
-
+                    <p id="myJD"><a href="#">我的京东<i class="fa fa-caret-down"></i></a></p>
                     <div class="divide"></div>
                     <p><a href="#">京东会员</a></p>
                     <div class="divide"></div>
@@ -38,6 +39,36 @@
                     <p><a href="#">网站导航<i class="fa fa-caret-down"></i></a></p>
                     <div class="divide"></div>
                     <p><a href="#">手机京东</a></p>
+                </div>
+
+                <div class="headerPopup">
+                    <div id="myJD-content" class="myJD">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">待处理订单</a></li>
+                                <li><a href="#">返修退换货</a></li>
+                                <li><a href="#">降价商品</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">消息</a></li>
+                                <li><a href="#">我的问答</a></li>
+                                <li><a href="#">我的关注</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">我的京豆&nbsp;&nbsp;</a></li>
+                                <li><a href="#">我的白条&nbsp;&nbsp;</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">我的优惠券</a></li>
+                                <li><a href="#">我的理财</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
